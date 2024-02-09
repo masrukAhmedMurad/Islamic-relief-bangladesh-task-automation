@@ -1,0 +1,532 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <style>
+
+
+@media print 
+        {
+            #head
+            
+            {
+                 display: none !important;
+            }
+
+
+        
+                .break  {page-break-after: always; }
+             
+            @page{size: landscape;}
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section-1 .text-1{
+
+        text-align: center;
+    
+    }
+
+    .section-1 .text-1 h6,h5{
+   margin: 2px;
+
+}
+
+
+
+
+.table-1{
+
+margin-top: 10px;
+}
+
+.table-1 table{
+
+   width: 100%;
+    margin: auto;
+}
+
+.table-1 table,td,th{
+
+    border: 2px solid black;
+    border-collapse: collapse;
+  
+}
+
+
+
+
+
+.flex-1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;          
+}
+
+
+.text-1{
+    margin-left: 23%;
+}
+
+
+
+
+
+
+.table-2{
+    
+    margin-top: 10px;
+}
+
+.table-2 table{
+
+   
+    width: 100%;
+    margin: auto;
+
+
+
+}
+
+.table-2 table,td,th{
+
+border: 2px solid black;
+border-collapse: collapse;
+
+}
+
+.table-2 table th{
+    padding: 0px;
+ 
+ 
+}
+
+
+
+
+
+th{
+    font-size: 11px;
+    padding: 1px;
+    height: 32px;
+    padding: 2px;
+    margin: 0px;
+    text-align: center;
+}
+
+td{
+    font-size: 11px;
+    height: 46px;
+    padding-left: 1px;
+    text-align: center;
+}
+
+
+
+
+#sl{
+   width: 10px;
+}
+
+#pnum{
+    width:130px;
+}
+
+
+#pname{
+    width: 160px;
+}
+
+#pfather{
+    width: 180px;
+}
+
+
+#pid{
+    width: 150px;
+}
+
+#pwrd{
+    width: 10px;
+}
+
+
+#pvill{
+    width: 150px;
+}
+
+#pmob{
+    width:90px;
+}
+
+#pcon{
+    width: 250px;
+}
+
+#psng{
+    width: 180px;
+}
+
+label{
+    width: 120px;
+}
+
+
+
+
+#page{
+    width: 20px;
+}
+
+#psex{
+    width: 25px;
+}
+
+
+
+
+
+.twop{
+    display: flex;
+  
+  
+}
+
+
+.sp{
+    margin-left: 40px;
+}
+
+
+
+
+
+
+.image-1{
+    height: 0.86in;
+    width: 1.29in;
+    margin-left: 15%;
+    z-index: 0;
+  margin-top: -10px;
+}
+
+.image-1 img{
+width: 100%;
+z-index: 0;
+}
+
+
+.smf{
+    font-size: 8px;
+}
+
+
+#ss th{
+    height: 15px !important;
+}
+
+#unnn{
+    width: 20px !important;
+}
+
+
+#sex{
+    width: 50px !important;
+}
+
+#dis{
+    width: 100px;
+}
+
+
+
+#add:hover{
+    color: blue;
+    background-color: orangered;
+    
+}
+
+
+#add{
+    font-weight: 600;
+}
+
+
+#tab2{
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#uprow th{
+    border: none;
+}
+
+
+td,th{
+    font-size: 12px !important;
+    padding: -1 !important;
+}
+
+
+#tab2 tr th{
+    border-left: none;
+    border-right: none;
+}
+
+#tab2,th{
+    border-collapse: collapse;
+}
+
+#tab2{
+    margin-top: 15px !important;
+}
+
+
+#pid{
+    font-size: 10px !important;
+}
+
+#tab2 #uprow th{
+    height: 65px !important;
+}
+
+
+
+#sno{
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    margin-top: -30px !important;
+}
+
+
+.lgf{
+    font-size: 16px !important;
+}
+
+
+
+body{
+    margin: 10px !important;
+}
+
+
+
+
+.section-1{
+    margin-top: 30px !important;
+}
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+    
+    <div class="container " id="head">
+        <h2 class="text-center mt-4 mb-4 text-info">Islamic Relief Bangladesh</h2>
+    	<div class="card ">
+    		<div class="card-header text-center bg-primary text-white"><b>Automated Participant List Generator</b></div>
+    		<div class="card-body bg-warning">
+    			<div class="twop">
+                    <div class="fp">
+                        <label for="pjname">Project Name : </label>
+                        <textarea name="" id="pjname" cols="40" rows="1"></textarea><br>
+                      
+                    
+                        <label for="date">Date : </label>
+                        <input type="text" id="date" ><br>
+                 
+                        <label for="dist">District : </label>
+                <input type="text" id="dist" ><br>
+                <label for="sno">Signatory count : </label>
+                <span id="sno" class="mx-4 fs-3 text-danger" >0</span>
+
+                    </div>
+                    <div class="sp">
+                       
+                        <label for="un">Union : </label>
+                        <input type="text" id="un" required><br>
+                <label for="upp">Upazila : </label>
+                <input type="text" name="" id="upp" required><br>
+                
+                <label for="stext">Signatories : </label>
+                        <input type="text" id="stext"><button class="mx-2 px-2 border rounded fs-4 bold" id="add">Add</button>
+                        <br>
+
+                <label for="excel_file">Excel File : </label>
+                <input type="file" id="excel_file" />
+               
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div>
+                    <h4 class="text-center">Signatory Preview</h1>
+                    <table id="tab2">
+                        <tr id="uprow"></tr>
+                        <tr id="dnrow"></tr>
+                    </table>
+                </div>
+                
+        
+
+    		</div>
+            <div class="card-header text-center bg-primary text-white"><b>Wait for a while after choosing excel file...</b></div>
+
+    	</div>
+       
+    </div>
+
+
+    <div id="excel_data" class=""></div>
+
+    
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+<script>
+
+
+var a=1;
+
+var uprow=document.getElementById("uprow");
+var dnrow=document.getElementById("dnrow");
+var addBtn=document.getElementById("add");
+var signatory=document.getElementById("stext");
+var table2=document.getElementById("tab2");
+var sno=document.getElementById("sno");
+
+
+
+addBtn.addEventListener("click",(event)=>{
+
+    
+if(parseInt(sno.innerText)<10){
+    uprow.innerHTML+='<th></th>'
+dnrow.innerHTML+='<th>'+signatory.value+'</th>';
+sno.innerText=parseInt(sno.innerText)+1;
+signatory.value="";
+}else{
+signatory.value="";
+}
+});
+
+
+
+
+
+
+    const excel_file = document.getElementById('excel_file');
+    const projectName=document.getElementById("pjname");
+    
+    const date=document.getElementById("date");
+    const union = document.getElementById('un');
+    const upazila=document.getElementById("upp");
+    const zila=document.getElementById("dist");
+    
+    
+    excel_file.addEventListener('change', (event) => {
+    
+        if(!['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel'].includes(event.target.files[0].type))
+        {
+            document.getElementById('excel_data').innerHTML = '<div class="alert alert-danger">Only .xlsx or .xls file format are allowed</div>';
+    
+            excel_file.value = '';
+    
+            return false;
+        }
+    
+        var reader = new FileReader();
+    
+        reader.readAsArrayBuffer(event.target.files[0]);
+    
+        reader.onload = function(event){
+    
+            var data = new Uint8Array(reader.result);
+    
+            var work_book = XLSX.read(data, {type:'array'});
+    
+            var sheet_name = work_book.SheetNames;
+    
+            var sheet_data = XLSX.utils.sheet_to_json(work_book.Sheets[sheet_name[0]], {header:1});
+ 
+            if(sheet_data.length > 0)
+            {
+                var table_output = '<div class="section-1"><div class="flex-1"><div class="text-1"><h5>Islamic Relief Bangladesh [ইসলামিক রিলিফ বাংলাদেশ] </h5><h6>'+projectName.value+'</h6><h6>Participant’s List [অংশগ্রহণকারীর তালিকা]</h6></div><div class="image-1"><img src="big-logo1.jpg" alt="hjh"></div></div><div class="table-1"><table><tr><th colspan="1" id="unnn">Union<br>[ইউনিয়ন]:</th><th colspan="1">'+union.value+'</th><th> Upazila [উপজেলা]:</th><th colspan="1">'+upazila.value+'</th><th colspan="2" id="dis">District [জেলা]:</th><th colspan="1">'+zila.value+'</th><th>Date [তারিখ]:</th><th colspan="2">'+date.value+'</th></tr><tr><th id="sl" rowspan="2"> Sl.<br>[ক্রমিক<br>নং]</th><th id="pnum" rowspan="2">Participant Number<br>[অংশগ্রহণকারীর নম্বর]</th><th rowspan="2" id="pname">Participant\'s Name<br>[অংশগ্রহণকারীর নাম]</th><th rowspan="2" id="pfather">Father/Husband/Guardian’s Name<br>[পিতা/স্বামী/অবিভাবকের নাম]</th><th id="psex"  rowspan="2" id="sex">Sex<br>[লিঙ্গ]</th><th id="page"  rowspan="2">Age<br>[বয়স]</th><th rowspan="2" id="pid">National ID /<br>Birth Certificate No.<br>[জাতীয় পরিচয়পত্র /<br>জন্ম সনদ নম্বর]</th><th rowspan="2" id="pmob">Mobile Number<br>[মোবাইল নম্বর]</th><th colspan="2">Address<br>[ঠিকানা]</th></tr><tr><th id="pwrd">Ward<br>[ওয়ার্ড]</th><th id="pvill">Village<br>[গ্রাম]</th></tr>';
+    
+                for(var row = 1; row < sheet_data.length; row++)
+                {
+    
+    
+                    if((row-1)%8==0 && (row-1)!=0){
+                       
+                        table_output += '</table></div><div class="table-2 break"><table id="tab2">'+table2.innerHTML+'</table></div>';
+    
+                        table_output += '<div class="section-1"><div class="flex-1"><div class="text-1"><h5>Islamic Relief Bangladesh [ইসলামিক রিলিফ বাংলাদেশ] </h5><h6>'+projectName.value+'</h6><h6>Participant’s List [অংশগ্রহণকারীর তালিকা]</h6></div><div class="image-1"><img src="big-logo1.jpg" alt="ghh"></div></div><div class="table-1"><table><tr><th colspan="1" id="unnn">Union<br>[ইউনিয়ন]:</th><th colspan="1">'+union.value+'</th><th> Upazila [উপজেলা]:</th><th colspan="1">'+upazila.value+'</th><th colspan="2" id="dis">District [জেলা]:</th><th colspan="1">'+zila.value+'</th><th>Date [তারিখ]:</th><th colspan="2">'+date.value+'</th></tr><tr><th id="sl" rowspan="2"> Sl.<br>[ক্রমিক<br>নং]</th><th id="pnum" rowspan="2">Participant Number<br>[অংশগ্রহণ-কারীর নম্বর]</th><th rowspan="2" id="pname">Participant\'s Name<br>[অংশগ্রহণকারীর নাম]</th><th rowspan="2" id="pfather">Father/Husband/Guardian’s Name<br>[পিতা/স্বামী/অবিভাবকের নাম]</th><th id="psex"  rowspan="2" id="sex">Sex<br>[লিঙ্গ]</th><th id="page"  rowspan="2">Age<br>[বয়স]</th><th rowspan="2" id="pid">National ID /<br>Birth Certificate No.<br>[জাতীয় পরিচয়পত্র /<br>জন্ম সনদ নম্বর]</th><th rowspan="2" id="pmob">Mobile Number<br>[মোবাইল নম্বর]</th><th colspan="2">Address<br>[ঠিকানা]</th></tr><tr><th id="pwrd">Ward<br>[ওয়ার্ড]</th><th id="pvill">Village<br>[গ্রাম]</th></tr>';
+    
+                        table_output+='<tr><td>'+ a++ +'</td><td class="lgf">'+sheet_data[row][18]+'</td><td class="lgf">'+sheet_data[row][19]+'</td><td class="lgf">'+sheet_data[row][20]+'</td><td id="sex">'+sheet_data[row][22]+'</td><td>'+sheet_data[row][21]+'</td><td class="lgf">'+sheet_data[row][24]+'</td><td>'+sheet_data[row][25]+'</td><td>'+sheet_data[row][11]+'</td><td class="smf">'+sheet_data[row][12]+'</td></tr>';
+    
+                    }
+    
+                    else{
+                        table_output+='<tr><td>'+ a++ +'</td><td class="lgf">'+sheet_data[row][18]+'</td><td class="lgf">'+sheet_data[row][19]+'</td><td class="lgf">'+sheet_data[row][20]+'</td><td id="sex">'+sheet_data[row][22]+'</td><td >'+sheet_data[row][21]+'</td><td class="lgf">'+sheet_data[row][24]+'</td><td>'+sheet_data[row][25]+'</td><td>'+sheet_data[row][11]+'</td><td class="smf">'+sheet_data[row][12]+'</td></tr>';
+    
+                    }
+    
+    
+                }
+    
+                table_output += '</table></div><div class="table-2 break"><table id="tab2">'+table2.innerHTML+'</table></div>';
+                document.getElementById('excel_data').innerHTML = table_output;
+            }
+    
+            excel_file.value = '';
+    
+        }
+    
+    });
+    
+    </script>

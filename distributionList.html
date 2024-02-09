@@ -1,0 +1,629 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <style>
+
+
+@media print 
+        {
+            #head
+            
+            {
+                 display: none !important;
+            }
+
+
+        
+                .break  {page-break-after: always; }
+             
+            @page{size: landscape;}
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+body{
+    margin: 8px !important;
+}
+    .section-1 .text-1{
+
+        text-align: center;
+    
+    }
+
+    .section-1 .text-1 h6,h5{
+        margin: 0px;
+
+}
+
+
+
+
+
+
+.table-1{
+    margin-top: 6px;
+
+}
+
+.table-1 table{
+
+   width: 100%;
+    margin: auto;
+}
+
+.table-1 table,td,th{
+
+    border: 2px solid black;
+    border-collapse: collapse;
+  
+}
+
+
+
+.flex-1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;          
+}
+
+
+.text-1{
+    margin-left: 24%;
+}
+
+
+.table-2{
+    
+    margin-top: 5px;
+}
+
+.table-2 table{
+
+   
+    width: 100%;
+    margin: auto;
+
+
+
+}
+
+.table-2 table,td,th{
+
+border: 2px solid black;
+border-collapse: collapse;
+
+}
+
+.table-2 table th{
+    padding: 5px;
+ 
+ 
+}
+
+.table-2 table #ftsng td{
+    height: 50px;
+}
+
+
+
+th{
+    font-size: 10px;
+    padding-left: 1px;
+    height: 25px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+td{
+    font-size: 10px;
+    height: 60px;
+    padding-left: 1px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+#sl{
+    width: 40px;
+}
+
+#pnum{
+    width: 110px;
+}
+
+
+#pname{
+    width: 190px;
+}
+
+#pfather{
+    width: 130px;
+}
+
+
+#pid{
+    width: 130px;
+}
+
+#pwrd{
+    font-size: 8px !important;
+    width: 8px;
+}
+
+
+#pvill{
+    width: 90px !important;
+}
+
+#pmob{
+    width:80px;
+}
+
+#pcon{
+    width: 200px;
+}
+
+#psng{
+    width: 220px;
+}
+
+label{
+    width: 150px;
+}
+
+
+
+
+.twop{
+    display: flex;
+  
+  
+}
+
+
+.sp{
+    margin-left: 40px;
+}
+
+
+
+.image-1{
+    height: 0.67in;
+    width: 1.01in;
+    margin-left: 8%;
+    z-index: 0;
+  margin-top: -7px;
+}
+
+.image-1 img{
+width: 100%;
+z-index: 0;
+}
+
+
+.smf{
+    font-size: 8px;
+    word-wrap: break-word;
+    max-width: 100px !important;
+}
+
+
+
+.f{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ttb{
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+
+#urow th{
+    border: none;
+}
+
+
+td,th{
+    font-size: 10px !important;
+    padding: -1 !important;
+}
+
+#pid{
+    font-size: 8px !important;
+}
+
+#ttb tr th{
+    border-left: none;
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#add:hover{
+    color: blue;
+    background-color: orangered;
+    
+}
+
+
+#add{
+    font-weight: 600;
+}
+
+
+
+
+#sno{
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    margin-top: -30px !important;
+}
+
+
+
+
+
+#tab2{
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#uprow th{
+    border: none;
+}
+
+
+td,th{
+    font-size: 12px !important;
+    padding: -1 !important;
+}
+
+
+#tab2 tr th{
+    border-left: none;
+    border-right: none;
+}
+
+#tab2,th{
+    border-collapse: collapse;
+}
+
+
+
+#pid{
+    font-size: 10px !important;
+}
+
+#tab2 #uprow th{
+    height: 50px !important;
+}
+
+td{max-height: 54px !important}
+
+
+
+
+
+.xsf{
+
+    font-size: 8px !important;
+}
+
+
+#css{
+    width: 15px !important;
+    font-size: 6px !important;
+}
+
+#contt{
+    min-width: 155px !important;
+    font-size: 10px !important;
+    max-width: 198px !important;
+}
+
+
+.lgf{
+    font-size: 16px !important;
+}
+
+
+body{
+    margin: 8px !important;
+}
+
+
+
+
+#cash{
+    padding: 2px !important;
+}
+
+
+
+
+.llgf{
+    
+
+font-size: 12px;
+
+}
+
+
+
+
+
+
+.xxsmf{
+font-size: 8px !important;
+word-wrap: break-word;
+}
+
+
+
+.wrp{
+    word-wrap: break-word;
+}
+
+
+
+.section-1{
+    margin-top: 4px !important;
+}
+
+
+#tab2 #uprow th{
+    height: 65px !important;
+}
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+
+    <div class="container" id="head">
+    	<h2 class="text-center mt-0 mb-4 text-info">Islamic Relies Bangladesh</h2>
+    	<div class="card">
+    		<div class="card-header text-center bg-primary text-white"><b>Automated Distribution List Generator</b></div>
+    		<div class="card-body bg-warning">
+    			<div class="twop">
+                    <div class="fp">
+                  
+                        <label for="un">Union : </label>
+                        <input type="text" id="un" required><br>
+                        <label for="upp">Upazila : </label>
+                        <input type="text" name="" id="upp" required><br>
+                        <label for="dist">District : </label>
+                        <input type="text" id="dist" required><br>
+
+                        <label for="pjname">Project Name :</label>
+
+                        <textarea id="pjname" name="textbox" rows="1" cols="40">
+                    
+                        </textarea><br>
+                        
+                        <label for="cont">In Kind :</label>
+
+                        <textarea id="cont" name="textbox" rows="1" cols="40">
+                    
+                        </textarea><br>
+                       
+               
+           
+               
+                      
+
+                    </div>
+                    <div class="sp">
+                        <label for="sno">Signatory count : </label>
+                <span id="sno" class="mx-4 fs-3 text-danger" >0</span><br>
+                <label for="cash">Cash in BDT. : </label>
+                <input type="text" id="cash" ><br>
+                <label for="date">Distribution Date : </label>
+                <input type="text" id="date" ><br>
+                        <label for="stext">Signatories : </label>
+                        <input type="text" id="stext"><button class="mx-2 px-2 border rounded fs-4 bold" id="add">Add</button>
+                        <br>
+                
+                <label for="excel_file">Excel File : </label>
+                <input type="file" id="excel_file" />
+
+    
+
+</div>
+
+
+
+
+                </div>
+                
+                <div>
+                    <h4 class="text-center">Signatory Preview</h1>
+                    <table id="tab2">
+                        <tr id="uprow"></tr>
+                        <tr id="dnrow"></tr>
+                    </table>
+                </div>
+                
+        
+
+    		</div>
+
+    		</div>
+            <div class="card-header text-center bg-primary text-white"><b>Wait for a while after choosing Excel file...</b></div>
+
+    	</div>
+       
+    </div>
+
+
+    <div id="excel_data" class=""></div>
+
+    
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+<script>
+
+
+
+
+var a=1;
+
+
+var uprow=document.getElementById("uprow");
+var dnrow=document.getElementById("dnrow");
+var addBtn=document.getElementById("add");
+var signatory=document.getElementById("stext");
+var table2=document.getElementById("tab2");
+
+var cashno=document.getElementById("cash");
+
+var cashno=document.getElementById("contt");
+
+addBtn.addEventListener("click",(event)=>{
+
+if(parseInt(sno.innerText)<10){
+    uprow.innerHTML+='<th></th>'
+dnrow.innerHTML+='<th>'+signatory.value+'</th>';
+sno.innerText=parseInt(sno.innerText)+1;
+signatory.value="";
+}else{
+signatory.value="";
+}
+});
+
+
+        
+    
+
+    const excel_file = document.getElementById('excel_file');
+    const projectName=document.getElementById("pjname");
+    
+    const date=document.getElementById("date");
+    const union = document.getElementById('un');
+    const upazila=document.getElementById("upp");
+    const zila=document.getElementById("dist");
+    
+    const cont=document.getElementById("cont");
+    
+    excel_file.addEventListener('change', (event) => {
+    
+        if(!['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel'].includes(event.target.files[0].type))
+        {
+            document.getElementById('excel_data').innerHTML = '<div class="alert alert-danger">Only .xlsx or .xls file format are allowed</div>';
+    
+            excel_file.value = '';
+    
+            return false;
+        }
+    
+        var reader = new FileReader();
+    
+        reader.readAsArrayBuffer(event.target.files[0]);
+    
+        reader.onload = function(event){
+    
+            var data = new Uint8Array(reader.result);
+    
+            var work_book = XLSX.read(data, {type:'array'});
+    
+            var sheet_name = work_book.SheetNames;
+    
+            var sheet_data = XLSX.utils.sheet_to_json(work_book.Sheets[sheet_name[0]], {header:1});
+    
+            if(sheet_data.length > 0)
+            {
+                var table_output ='<div class="section-1"><div class="flex-1"><div class="text-1"><h5>Islamic Relief Bangladesh [ইসলামিক রিলিফ বাংলাদেশ] </h5><h6>'+projectName.value+'</h6><h6>Distribution List [বিতরণের তালিকা]</h6></div><div class="image-1"><img src="big-logo1.jpg" alt=""></div></div><div class="table-1"><table><tr><th colspan="2">Union [ইউনিয়ন]:</th><th colspan="1">'+union.value+'</th><th> Upazila [উপজেলা]:</th><th colspan="1">'+upazila.value+'</th><th>District [জেলা]:</th><th colspan="2">'+zila.value+'</th><th colspan="2">Date of Distribution<br>[বিতরণের তারিখ]:</th><th>'+date.value+'</th></tr><tr><th id="sl" rowspan="2"> Sl. [ক্র<br>মিক<br>নং]</th><th id="pnum" rowspan="2">Participant<br>Number<br>[অংশগ্রহণকারীর নম্বর]</th><th rowspan="2" id="pname">Participant\'s<br>Name<br>[অংশগ্রহণকারীর<br> নাম]</th><th rowspan="2" id="pfather">Father/Husband/<br>Guardian’s Name<br>[পিতা/স্বামী/<br>অবিভাবকের নাম]</th><th rowspan="2" id="pid">National ID /<br>Birth Certificate No.<br>[জাতীয় পরিচয়পত্র /<br>জন্ম সনদ নম্বর]</th><th rowspan="2" id="pmob">Mobile Number<br>[মোবাইল নম্বর]</th><th colspan="2">Address<br>[ঠিকানা]</th><th rowspan="1" colspan="2" id="pcon">Content and<br>Quantity<br>[দ্রব্য এবং পরিমাণ]</th><th rowspan="2" id="psng">Participant’s Signature/<br> Thumb Print<br>[অংশগ্রহন-কারীর<br>সাক্ষর/টিপসই]</th></tr><tr><th id="pwrd">Ward<br>[ওয়ার্ড]</th><th id="pvill">Village<br>[গ্রাম]</th><th class="xsf" id="contt">In Kind</br>উপাদান</th><th class="xsf" id="css">Cash in BDT</br>নগদ(টাকা)</th></tr>';
+    
+                for(var row = 1; row < sheet_data.length; row++)
+                {
+    
+    
+                    if((row-1)%8==0 && (row-1)!=0){
+                       
+                        table_output += '</table></div><div class="table-2 break"><table id="tab2">'+table2.innerHTML+'</table></div>';    
+                        table_output += '<div class="section-1"><div class="flex-1"><div class="text-1"><h5>Islamic Relief Bangladesh [ইসলামিক রিলিফ বাংলাদেশ] </h5><h6>'+projectName.value+'</h6><h6>Distribution List [বিতরণের তালিকা]</h6></div><div class="image-1"><img src="big-logo1.jpg" alt=""></div></div><div class="table-1"><table><tr><th colspan="2">Union [ইউনিয়ন]:</th><th colspan="1">'+union.value+'</th><th> Upazila [উপজেলা]:</th><th colspan="1">'+upazila.value+'</th><th>District [জেলা]:</th><th colspan="2">'+zila.value+'</th><th colspan="2">Date of Distribution<br>[বিতরণের তারিখ]:</th><th>'+date.value+'</th></tr><tr><th id="sl" rowspan="2"> Sl. [ক্র<br>মিক<br>নং]</th><th id="pnum" rowspan="2">Participant<br>Number<br>[অংশগ্রহণকারীর নম্বর]</th><th rowspan="2" id="pname">Participant\'s<br>Name<br>[অংশগ্রহণকারীর<br> নাম]</th><th rowspan="2" id="pfather">Father/Husband/<br>Guardian’s Name<br>[পিতা/স্বামী/<br>অবিভাবকের নাম]</th><th rowspan="2" id="pid">National ID /<br>Birth Certificate No.<br>[জাতীয় পরিচয়পত্র /<br>জন্ম সনদ নম্বর]</th><th rowspan="2" id="pmob">Mobile Number<br>[মোবাইল নম্বর]</th><th colspan="2">Address<br>[ঠিকানা]</th><th rowspan="1" colspan="2" id="pcon">Content and<br>Quantity<br>[দ্রব্য এবং পরিমাণ/সংখ্যা]</th><th rowspan="2" id="psng">Participant’s Signature/<br> Thumb Print<br>[অংশগ্রহন-কারীর<br>সাক্ষর/টিপসই]</th></tr><tr><th id="pwrd">Ward<br>[ওয়ার্ড]</th><th id="pvill">Village<br>[গ্রাম]</th><th class="xsf" id="contt">In Kind</br>উপাদান</th><th class="xsf" id="css">Cash in BDT</br>নগদ(টাকা)</th></tr>';
+    
+                        table_output+='<tr><td>'+ a++ +'</td><td  class="lgf">'+sheet_data[row][18]+'</td><td  class="lgf wrp">'+sheet_data[row][19]+'</td><td  class="llgf wrp">'+sheet_data[row][20]+'</td><td  class="lgf">'+sheet_data[row][24]+'</td><td>'+sheet_data[row][25]+'</td><td>'+sheet_data[row][11]+'</td><td class="smf wrp" p>'+sheet_data[row][12]+'</td><td class="xxsmf wrp">'+cont.value+'</td><td id="cash">'+cash.value+'</td><td></td></tr>';
+    
+                    }
+    
+                    else{
+                        table_output+='<tr><td>'+ a++ +'</td><td  class="lgf">'+sheet_data[row][18]+'</td><td  class="lgf">'+sheet_data[row][19]+'</td><td  class="llgf">'+sheet_data[row][20]+'</td><td  class="lgf">'+sheet_data[row][24]+'</td><td>'+sheet_data[row][25]+'</td><td>'+sheet_data[row][11]+'</td><td class="smf wrp" >'+sheet_data[row][12]+'</td><td class="xxsmf wrp">'+cont.value+'</td><td id="cash">'+cash.value+'</td><td></td></tr>';
+    
+                    }
+    
+    
+                }
+    
+                table_output += '</table></div><div class="table-2 break"><table id="tab2">'+table2.innerHTML+'</table></div>';
+      document.getElementById('excel_data').innerHTML = table_output;
+            }
+    
+            excel_file.value = '';
+    
+        }
+    
+    });
+    
+    </script>

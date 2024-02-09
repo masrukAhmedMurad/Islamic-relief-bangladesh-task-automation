@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Generation Distribution Cards</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <style>
+
+
+
+        
+       
+
+
+        
+
+
+        @media print {
+            #head{
+                 display: none !important;
+             }
+     
+            
+     
+             .break {
+                 page-break-after: always;
+             }
+     
+             
+         }
+
+    
+         *{
+
+margin: 0;
+padding: 0;
+
+
+}
+
+.text-1 h4,h5,h3{
+        margin: 1px;
+        text-align: center;
+
+}
+
+.flex-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  
+}
+
+
+.text-1{
+    margin-left: 27%;
+}
+
+
+
+
+.image-1{
+    height: 0.94in;
+    width: 1.41in;
+    margin-left: 10%;
+    z-index: 0;
+    
+}
+
+.image-1 img{
+width: 100%;
+z-index: 0;
+}
+
+
+table,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cardd{
+            text-align: center;
+            width: 900px;
+            margin: auto;
+            border: 2px solid black;
+            margin-bottom:40px;
+            margin-top: 40px;
+            border-collapse: collapse;
+           
+        }
+
+
+th{
+    font-size: 12px;
+    padding: -1px;
+    text-align: center;
+}
+    
+table{
+    width: 100%;
+    margin-top: 10px;
+}
+
+td{
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 0px;
+}
+
+td,th{
+    height: 28px;
+   
+}
+
+#pic{
+    height: 120px;
+    width: 155px !important;
+    margin: 0px !important;
+    padding: 0 !important;
+}
+
+
+
+#wrd{
+
+    width: 7px !important;
+    font-size: 10px !important;
+
+}
+
+#vill{
+    width: 140px !important;
+}
+
+
+#datte{
+
+    width: 220px !important;
+}
+#pic img{
+   width: 100%;
+   height: 133%;
+   margin:0px;
+   padding: 0 !important;
+   margin: 0;
+   padding-top: 0px !important;
+   
+}
+
+
+
+
+
+
+#cont{
+    height: 35px !important;
+    font-size: 14px !important;
+}
+
+#sng{
+    height: 35px;
+}
+
+
+
+label{
+    width: 150px;
+}
+
+
+
+
+.twop{
+    display: flex;
+  
+  
+}
+
+
+.sp{
+    margin-left: 40px;
+}
+
+
+
+#date{
+
+width: 185px;
+}
+
+
+
+.lf{
+
+font-size: 14px !important;
+
+}
+
+.llf{
+
+font-size: 20px !important;
+
+}
+
+
+.sf{
+
+font-size: 11px !important;
+
+}
+
+
+.xsf{
+
+    font-size: 10px !important;
+
+
+}
+
+
+#vil{
+    height: 40px !important;
+    font-size: 13px !important;
+    
+}
+
+.tccc{
+    height: 60px !important;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+   
+    <div class="container" id="head">
+    	<h2 class="text-center mt-4 mb-4 text-info">Islamic Relief Bangladesh</h2>
+    	<div class="card ">
+    		<div class="card-header bg-primary text-center text-white"><b>Automatic Distribution Card Generator</b></div>
+    		<div class="card-body bg-warning">
+    			<div class="twop">
+                    <div class="fp">
+                  
+                        <label for="pn">Project Name</label>
+
+                        <textarea id="pn" name="textbox" rows="1" cols="40"> </textarea><br>
+                        <label for="un">Union : </label>
+                <input type="text" id="un" required><br>
+                <label for="upp">Upazila : </label>
+                <input type="text" name="" id="upp" required><br>
+                <label for="dist">District : </label>
+                <input type="text" id="dist" required><br>
+                
+                <label for="cona">In Kind</label>
+
+                        <textarea id="cona" name="textbox" rows="2" cols=40"> </textarea><br>
+              
+                        
+
+                    </div>
+                    <div class="sp">
+                        <label for="cash">Cash Amount(BDT) : </label>
+                     <input type="text" id="cash" required><br>
+                        <label for="date">Distribution Date : </label>
+                        <input type="text" id="date" required><br>
+                        <label for="place">Distribution Place : </label>
+                        <input type="text" id="place" required><br>
+                       
+                        <label for="excel_file">Excel File : </label>
+                        <input type="file" id="excel_file" />
+                      
+                    
+                        
+                      
+            
+               
+
+                    </div>
+
+
+                </div>
+                
+                
+               
+        
+
+    		</div>
+            <div class="card-header bg-primary text-white text-center"><b>Use scrollbar for large file...</b></div>
+
+    	</div>
+       
+    </div>
+
+
+    <div id="excel_data" class=""></div>
+
+    
+
+</body>
+</html>
+
+<script>
+
+const excel_file = document.getElementById('excel_file');
+  
+const place=document.getElementById("place");
+    const date=document.getElementById("date");
+    const pName=document.getElementById("pn");
+    const union = document.getElementById('un');
+    const upazila=document.getElementById("upp");
+    const zila=document.getElementById("dist");
+    
+    const cona=document.getElementById("cona");
+    const cash=document.getElementById("cash");
+
+excel_file.addEventListener('change', (event) => {
+
+    if(!['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel'].includes(event.target.files[0].type))
+    {
+        document.getElementById('excel_data').innerHTML = '<div class="alert alert-danger">Only .xlsx or .xls file format are allowed</div>';
+
+        excel_file.value = '';
+
+        return false;
+    }
+
+    var reader = new FileReader();
+
+    reader.readAsArrayBuffer(event.target.files[0]);
+
+    reader.onload = function(event){
+
+        var data = new Uint8Array(reader.result);
+
+        var work_book = XLSX.read(data, {type:'array'});
+
+        var sheet_name = work_book.SheetNames;
+
+        var sheet_data = XLSX.utils.sheet_to_json(work_book.Sheets[sheet_name[0]], {header:1});
+
+        if(sheet_data.length > 0)
+        {
+            var table_output = '';
+
+            for(var row = 1; row < sheet_data.length; row++)
+            {
+
+
+                if(row%2!=0){
+
+                table_output+=' <div class="cardd"><div class="flex-1"><div class="text-1"><h3>Islamic Relief Bangladesh</h3><h4>Humanitarian & Resilience Programme</h4><h5>'+pName.value+'</h5><h5>Distribution Card [বিতরণ কার্ড]</h5></div><div class="image-1"><img src="big-logo1.jpg" alt=""></div></div><table><tr><th id="datte">Date of Distribution[বিতরণের তারিখ]</th><th colspan="4" class="llf">'+date.value+'</th><td rowspan="5" id="pic"></td></tr><tr><th>Place of Distribution [বিতরণের স্থান]</th><th colspan="4" class="llf">'+place.value+'</th></tr><tr><th class="xsf">Participant Number [অংশগ্রহণকারীর নম্বর]</th><th colspan="4" class="llf">'+sheet_data[row][18]+'</th></tr><tr><th class="sf">Participant\'s Name [অংশগ্রহণকারীর নাম]</th><th colspan="4" class="llf">'+sheet_data[row][19]+'</th></tr><tr><th class="sf">Father/Husband/Guardian’s Name <br>[পিতা/স্বামী/অবিভাবকের নাম]</th><th colspan="2" class="lf">'+sheet_data[row][20]+'</th><th >Age [বয়স]</th><th colspan="1" class="lf">'+sheet_data[row][21]+'</th></tr><tr><th>National ID /Birth Certificate No.<br>[জাতীয় পরিচয়পত্র / জন্ম সনদ নম্বর]</th><th colspan="2" class="llf">'+sheet_data[row][24]+'</th><th>Sex [লিঙ্গ]</th><th colspan="2" class="lf" >'+sheet_data[row][22]+'</th></tr><tr><th rowspan="2" class="lf">Participant\'s Address<br>[অংশগ্রহণকারীর ঠিকানা]</th><th id="vill">Village [গ্রাম]</th><th id="wrd">Ward [ওয়ার্ড]</th><th>Union [ইউনিয়ন]</th><th>Upazila [উপজেলা]</th><th>District [জেলা]</th></tr><tr><th   id="vil" class="lf">'+sheet_data[row][12]+'</th><th class="lf">'+sheet_data[row][11]+'</th><th class="lf">'+union.value+'</th><th class="lf">'+upazila.value+'</th><th class="lf">'+zila.value+'</th></tr><tr ><th colspan="5" class="lf">Content and Quantity [উপাদান এবং পরিমাণ]</th><th colspan="1" class="lf">Cash in BDT.</th></tr><tr class="tccc"><th colspan="5"   id="cont" class="lf">'+cona.value+'</th><th colspan="1" class="lf">'+cash.value+'</th></tr><tr class="tccc"><th class="lf">Token distributed by [টোকেন বিতরণকারী]</th><th colspan="3"></th><th class="lf">Designation [পদবী]</th><td colspan="1"></th></tr><tr class="tccc"><th class="lf">Signature [স্বাক্ষর]</th><th colspan="5" id="sng"></th></tr><tr><th colspan="6" class="lf">For any suggestion / complaint (যে কোনো পরামর্শ/ অভিযোগ): 01777773701, feedback@islamicrelief-bd.org</th></tr></table></div>'
+       
+                }else{
+
+                    table_output+='<div class="cardd break"><div class="flex-1"><div class="text-1"><h3>Islamic Relief Bangladesh</h3><h4>Humanitarian & Resilience Programme</h4><h5>'+pName.value+'</h5><h5>Distribution Card [বিতরণ কার্ড]</h5></div><div class="image-1"><img src="big-logo1.jpg" alt=""></div></div><table><tr><th id="datte">Date of Distribution[বিতরণের তারিখ]</th><th colspan="4" class="llf">'+date.value+'</th><td rowspan="5" id="pic"></td></tr><tr><th>Place of Distribution [বিতরণের স্থান]</th><th colspan="4" class="llf">'+place.value+'</th></tr><tr><th class="xsf">Participant Number [অংশগ্রহণকারীর নম্বর]</th><th colspan="4" class="llf">'+sheet_data[row][18]+'</th></tr><tr><th class="sf">Participant\'s Name [অংশগ্রহণকারীর নাম]</th><th colspan="4" class="llf">'+sheet_data[row][19]+'</th></tr><tr><th class="sf">Father/Husband/Guardian’s Name <br>[পিতা/স্বামী/অবিভাবকের নাম]</th><th colspan="2" class="lf">'+sheet_data[row][20]+'</th><th >Age [বয়স]</th><th colspan="1" class="lf">'+sheet_data[row][21]+'</th></tr><tr><th>National ID /Birth Certificate No.<br>[জাতীয় পরিচয়পত্র / জন্ম সনদ নম্বর]</th><th colspan="2" class="llf">'+sheet_data[row][24]+'</th><th>Sex [লিঙ্গ]</th><th colspan="2"  class="lf">'+sheet_data[row][22]+'</th></tr><tr><th rowspan="2" class="lf">Participant\'s Address<br>[অংশগ্রহণকারীর ঠিকানা]</th><th id="vill"  class="lf">Village [গ্রাম]</th><th id="wrd">Ward [ওয়ার্ড]</th><th>Union [ইউনিয়ন]</th><th>Upazila [উপজেলা]</th><th>District [জেলা]</th></tr><tr><th   id="vil" class="lf">'+sheet_data[row][12]+'</th><th class="lf">'+sheet_data[row][11]+'</th><th class="lf">'+union.value+'</th><th class="lf" >'+upazila.value+'</th><th class="lf">'+zila.value+'</td></tr><tr class="tccc"><th colspan="5" class="lf">Content and Quantity [উপাদান এবং পরিমাণ]</th><th class="lf" colspan="1">Cash in BDT.</th></tr><tr><th colspan="5"   id="cont" class="lf">'+cona.value+'</th><th colspan="1" class="lf">'+cash.value+'</th></tr><tr class="tccc"><th class="lf">Token distributed by [টোকেন বিতরণকারী]</th><th colspan="3"></th><th class="lf">Designation [পদবী]</th><th colspan="1"></th></tr><tr class="tccc"><th class="lf">Signature [স্বাক্ষর]</th><th colspan="5" id="sng"></td></tr><tr><th colspan="6" class="lf">For any suggestion / complaint (যে কোনো পরামর্শ/ অভিযোগ): 01777773701, feedback@islamicrelief-bd.org</th></tr></table></div>'
+
+                }
+
+            }
+
+           
+
+            document.getElementById('excel_data').innerHTML = table_output;
+        }
+
+        excel_file.value = '';
+
+
+    }
+    
+
+});
+
+</script>
